@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>Building Performance Ontology</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"TechArticle","name":"Linked Building Data Ontologies", "headline":"A page redirecting to ontologies in the built environment domain. To add ontologies, please create a new issue.", "datePublished":"Fri Dec 18 16:30:00 CET 2020", "author":[{"@type":"Person","name":"Alex Donkers","url":"https://orcid.org/0000-0002-8809-3277"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+ $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ };    $(function(){
+      $("#featured").load("sections/featured-en.html"); 
+      $("#general").load("sections/general-en.html"); 
+      $("#topology").load("sections/topology-en.html"); 
+      $("#taxonomy").load("sections/taxonomy-en.html"); 
+      $("#observations").load("sections/observations-en.html"); 
+      $("#environmental").load("sections/environmental-en.html", null, loadHash); 
+    });
+    </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+<h1>Linked Building Data Ontologies</h1>
+
+
+<dl>
+<dt>Latest version:</dt>
+<dd><a href="http://www.github.com/AlexDonkers/bop#">http://www.github.com/AlexDonkers/bop#</a></dd>
+
+<dt>Creator:</dt>
+<dd><a href="https://orcid.org/0000-0002-8809-3277">Alex Donkers, TU Eindhoven</a></dd>
+
+<dt>Organisation:</dt>
+<dd><a href="https://www.tue.nl/en/research/research-groups/design-and-decision-support-systems/information-systems-in-the-built-environment/">Information Systems in the Built Environment, TU Eindhoven</a></dd>
+
+<dt>Cite as:</dt>
+<dd>Donkers, A.J.A. (2020). Linked Building Data Ontologies. https://alexdonkers.github.io/LBDontologies</dd>
+</dl>
+
+<hr/>
+</div>
+<div class="status">
+<div>
+<span>ISBE - TU Eindhoven</span>
+</div>
+</div>     <div id="introduction"></div>
+<div id="toc"></div>     <div id="featured"></div>
+	 <div id="general"></div>
+     <div id="topology"></div>
+     <div id="geometry"></div>
+     <div id="taxonomy"></div>
+	 <div id="observations"></div>
+	 <div id="environmental"></div>
+<html>
+<div id="acknowledgements">
+<h2 id="ack" class="list">Acknowledgements <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+</p>
+</div>
+
+</html>
+
+</div>
+</body>
+</html>
