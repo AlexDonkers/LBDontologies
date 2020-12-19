@@ -76,6 +76,7 @@ a:active { color: #C00; background: transparent }
 
   .column-l {
     float: left;
+    max-width:70%
   }
 
   .column-r {
