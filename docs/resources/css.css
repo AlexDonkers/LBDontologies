@@ -4,32 +4,49 @@ body {
     margin: 0px;
 }
 
+.content
+{
+    text-align: left;
+    background-color: white;
+    padding: 3em 3em 3em 3em;
+}
+
+
+/*SECTIONS*/
+
 .header {
-    padding: 60px;
+    padding: 50px 150px 50px 150px;
     text-align: center;
     background-image: url('https://raw.githubusercontent.com/AlexDonkers/bop/main/docs/resources/TUEbg.png'); 
     color: white;
     font-size: 30px;
   }
  
+.intro {
+    padding: 50px 150px 50px 150px;
+    text-align: center;
+    background-color: #25002f; 
+    color: white;
+    font-size: 30px;
+  }
+
+
+/*TEXT STYLES*/
+
 .ISBEbold {
     margin-top: 200px;
     color: #2F6FAB;
-    font-family: Helvetica, sans-serif;
+    font-family: Roboto, sans-serif;
     font-weight: bold;
     text-align: left;
     text-transform: uppercase;
     font-size: 10px
-
   }
-
-
 
   h1 {
     color:white;
-    font-family: Helvetica, sans-serif;
+    font-family: Roboto, sans-serif;
     font-weight: bold;
     text-align: left;
-    text-transform: uppercase;
     font-size: 30px;
 }
