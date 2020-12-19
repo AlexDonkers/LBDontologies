@@ -67,16 +67,20 @@ a:active { color: #C00; background: transparent }
     color: white;
     font-family: Roboto, sans-serif;
     text-align: justify;
-    font-size: 20px
+    font-size: 12px
     
   }
 
 
 /*COLUMNS*/
 
-  .column {
+  .column-l {
     float: left;
-    width: 50%;
+  }
+
+  .column-r {
+    float: left;
+    max-width: 500px;
   }
   
   /* Clear floats after the columns */
@@ -85,3 +89,9 @@ a:active { color: #C00; background: transparent }
     display: table;
     clear: both;
   }
+
+
+.atlasimage{
+    max-width: 100%;
+    object-position: bottom;
+}
