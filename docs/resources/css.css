@@ -48,14 +48,13 @@ body {
     font-weight: bold;
     text-align: left;
     text-transform: uppercase;
-    font-size: 12px
+    font-size: 12px;
   }
 
   .ABOUTtext {
     margin-top: 200px;
-    color: #white;
+    color: white;
     font-family: Roboto, sans-serif;
-    font-weight: 
     text-align: justify;
     text-transform: uppercase;
     font-size: 12px
