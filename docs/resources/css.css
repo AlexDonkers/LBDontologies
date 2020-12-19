@@ -1,0 +1,26 @@
+.header {
+    padding: 60px;
+    text-align: center;
+    background-image: url('https://raw.githubusercontent.com/AlexDonkers/bop/main/docs/resources/TUEbg.png'); 
+    color: white;
+    font-size: 30px;
+  }
+
+
+.ISBEbold {
+    text-transform: uppercase;
+    text-align: left;
+    color: #2F6FAB;
+  }
+
+
+
+  h1 {
+    line-height: 110%;
+    color:white;
+    font-family: Helvetica;
+    font-weight: bold;
+    background-color: transparent;
+    text-align: left;
+    text-transform: uppercase;
+}
