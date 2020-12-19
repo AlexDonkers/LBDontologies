@@ -1,120 +1,56 @@
 <!DOCTYPE html>
+
 <html>
 <head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
- <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>Building Performance Ontology</title>
-
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>Linked Building Data ontologies</title>
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"http://schema.org","@type":"TechArticle","url":"http://www.github.com/AlexDonkers/bop#","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://www.github.com/AlexDonkers/bop#","name":"Building Performance Ontology", "headline":"The Building Performance Ontology (BOP) is a set of ontological constructs which allows integration of data related to building performance. By (re-)using ontology patterns from major ontologies in the field, BOP provides a method to integrate both static and dynamic (time-series) properties to buildings, zones, elements and products. 
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"TechArticle","url":"http://www.github.com/AlexDonkers/LBDontologies","name":"Linked Building Data ontologies", "headline":"This page is created to gather ontologies related to the built environment domain. The aim of this library is to create a knowledge base of the most relevant ontologies for linked building data and to help researchers, students and professionals to find these ontologies easily. The page is contained by Alex Donkers (TU Eindhoven).
 
-It's aim is to facilitate building managers and facility managers with a common data structure to ease the process of data integration and to allow software tools to deal with the large heterogeneity of data. 
+	If you would like to add ontologies, please create an issue in the repository, including a link to the ontology, a short description and the category it belongs to.", "datePublished":"Thu Dec 17 11:03:23 CET 2020", "version":"1.1", "author":[{"@type":"Person","name":"Alex Donkers","url":"https://orcid.org/0000-0002-8809-3277"}]}</script>
+	
 
-By (re-)using concepts from major ontologies in the field, BOP could easily be integrated with a wide range of existing ontologies and datasets. BOP could be seen as an extension of existing work rather than an individual ontology.", "datePublished":"Thu Dec 17 11:03:23 CET 2020", "version":"1.1", "author":[{"@type":"Person","name":"https://orcid.org/0000-0002-8809-3277","url":"https://orcid.org/0000-0002-8809-3277"}]}</script>
-
-<script src="resources/jquery.js"></script> 
-<script src="resources/marked.min.js"></script> 
-    <script> 
-function loadHash() {
-  jQuery(".markdown").each(function(el){jQuery(this).after(marked(jQuery(this).text())).remove()});
-	var hash = location.hash;
-	if($(hash).offset()!=null){
-	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
-}
-	loadTOC();
-}
-function loadTOC(){
-	//process toc dynamically
-	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
-	  jQuery(".list").each(function(){
-		if(jQuery(this).is('h2')){
-			if(j>0){
-				t+='</ul>';
-				j=0;
-			}
-			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
-			i++;
-		}
-		if(jQuery(this).is('h3')){
-			if(j==0){
-				t+='<ul>';
-			}
-			j++;
-			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
-		}
-	  });
-	  t+='</ul>';
-	  $("#toc").html(t); 
-}
- $.fn.ignore = function(sel){
-        return this.clone().find(sel||">*").remove().end();
- };    $(function(){
-      $("#about").load("sections/about-en.html"); 
-      $("#ontologies").load("sections/ontologies-en.html"); 
-      $("#overview").load("sections/overview-en.html"); 
-      $("#description").load("sections/description-en.html"); 
-      $("#references").load("sections/references-en.html"); 
-      $("#crossref").load("sections/crossref-en.html", null, loadHash); 
-    });
-    </script> 
-  </head> 
+</head>
 
 <body>
-<div class="container">
-<div class="head">
-<div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
-<h1>Linked Building Data Ontologies</h1>
+	<div class="container">
+	<div class="head">
+	<div style="float:right">Add an ontology <a href="https://github.com/AlexDonkers/LBDontologies/issues"><b>here</b></a>! </div>
+	<h1>Linked Building Data ontologies</h1>
 
+	<dl>
+	<dt>GitHub:</dt>
+	<dd><a href="http://www.github.com/AlexDonkers/LBDontologies">LBDontologies repository</a></dd>
+	<dt>Creator:</dt>
+	<dd><a href="https://orcid.org/0000-0002-8809-3277">Alex Donkers, TU Eindhoven</a></dd>
+	<dt>Cite as:</dt>
+	<dd>Donkers, A.J.A. (2020). Linked Building Data Ontologies. https://alexdonkers.github.io/LBDontologies</dd>
 
-<dl>
-<dt>GitHub:</dt>
-<dd><a href="http://www.github.com/AlexDonkers/LBDontologies">LBDontologies repository</a></dd>
-<dt>Creator:</dt>
-<dd><a href="https://orcid.org/0000-0002-8809-3277">Alex Donkers, TU Eindhoven</a></dd>
-<dt>Cite as:</dt>
-<dd>Donkers, A.J.A. (2020). Linked Building Data Ontologies. https://alexdonkers.github.io/LBDontologies</dd>
+	<!-- Below is the bar containing three logos. The definition of the id's and class could be found in extra.css -->
+	<div id="wrapper"> 
+		<div id="tue" class="logo" href="https://www.tue.nl/en/research/research-groups/design-and-decision-support-systems/information-systems-in-the-built-environment/"></div>
+		<div id="kpn" class="logo" href="https://www.kpn.com/"></div>
+		<div id="isbe" class="logo" href="https://github.com/ISBE-TUe"></div>
+	</div>
 
-<!-- Below is the bar containing three logos. The definition of the id's and class could be found in extra.css -->
-<div id="wrapper"> 
-	<div id="tue" class="logo" href="https://www.tue.nl/en/research/research-groups/design-and-decision-support-systems/information-systems-in-the-built-environment/"></div>
-	<div id="kpn" class="logo" href="https://www.kpn.com/"></div>
-	<div id="isbe" class="logo" href="https://github.com/ISBE-TUe"></div>
-  </div>
+	</dl>
 
-</dl>
-
-<hr/>
-</div>
-<div class="status">
-<div>
-<span>Ontology Specification Draft</span>
-</div>
-</div>     <div id="about"></div>
-<div id="toc"></div>     <div id="ontologies"></div>
-     <div id="overview"></div>
-     <div id="description"></div>
-     <div id="crossref"></div>
-	 <div id="references"></div>
-<html>
-<div id="acknowledgements">
-
-    <div id="legend">
-        <h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-        <div class="entity">
-        <sup class="type-c" title="Draft">c</sup>: Draft <br>
-        <sup class="type-op" title="Finished">op</sup>: Finished <br>
-        <sup class="type-dp" title="W3 approved">dp</sup>: W3 approved <br>
-        <sup class="type-ni" title="Deleted">ni</sup>: Deleted
-        </div>
-        </div>
-
-    <h2 id="ack" class="list">Acknowledgements <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-<p>
-The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
-</div>
-
-</html>
-
-</div>
+    
 </body>
+
+
+
+
 </html>
+
+
+
+
+
+
+
+<h2>About</h2><span class="markdown">
+This page is created to gather ontologies related to the built environment domain. The aim of this library is to create a knowledge base of the most relevant ontologies for linked building data and to help researchers, students and professionals to find these ontologies easily. The page is contained by <a href="https://research.tue.nl/nl/persons/alex-ja-donkers">Alex Donkers</a> (<a href="https://www.tue.nl/en/research/research-groups/design-and-decision-support-systems/information-systems-in-the-built-environment/">TU Eindhoven</a>).
+
+If you would like to add ontologies, please <a href="https://github.com/AlexDonkers/LBDontologies/issues">create an issue</a> in the repository, including a link to the ontology, a short description and the category it belongs to.</span>
