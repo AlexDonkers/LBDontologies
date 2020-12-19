@@ -12,6 +12,10 @@ body {
     padding: 50px 150px 50px 150px;
 }
 
+:link { color: #3897F1; background: transparent; text-decoration: none}
+:visited { color: #3897F1; background: transparent }
+a:active { color: #C00; background: transparent }
+
 
 /*SECTIONS*/
 
@@ -52,10 +56,9 @@ body {
   }
 
   .ABOUTtext {
-    margin-top: 200px;
     color: white;
     font-family: Roboto, sans-serif;
     text-align: justify;
-    text-transform: uppercase;
-    font-size: 12px
+    font-size: 20px
+    
   }
