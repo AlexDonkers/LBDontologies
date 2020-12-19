@@ -1,3 +1,9 @@
+body {
+    text-align: justify;
+    background-color: white;
+    margin: 0px;
+}
+
 .header {
     padding: 60px;
     text-align: center;
